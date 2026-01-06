@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ing. Peter Paška — Software Developer</title>
+    <meta
+      name="description"
+      content="Ing. Peter Paška — software developer. Rýchla moderná single-page stránka: profil, zručnosti a kontakt." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Arial", "Noto Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-slate-900 antialiased">
+    <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+        <a href="#top" class="group inline-flex items-center gap-2">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-white">
+            PP
+          </span>
+          <span class="text-sm font-semibold tracking-tight text-slate-900">
+            Ing. Peter Paška
+          </span>
+        </a>
+
+        <nav class="hidden items-center gap-6 sm:flex">
+          <a class="text-sm font-medium text-slate-600 hover:text-slate-900" href="#about">O mne</a>
+          <a class="text-sm font-medium text-slate-600 hover:text-slate-900" href="#skills">Zručnosti</a>
+          <a class="text-sm font-medium text-slate-600 hover:text-slate-900" href="#work">Práca</a>
+          <a class="text-sm font-medium text-slate-600 hover:text-slate-900" href="#contact">Kontakt</a>
+        </nav>
+
+        <button
+          id="menuButton"
+          class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50 sm:hidden"
+          aria-expanded="false"
+          aria-controls="mobileMenu">
+          Menu
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="hidden border-t border-slate-200/70 bg-white sm:hidden">
+        <div class="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3">
+          <a class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50" href="#about">O mne</a>
+          <a class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50" href="#skills">Zručnosti</a>
+          <a class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50" href="#work">Práca</a>
+          <a class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50" href="#contact">Kontakt</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="relative overflow-hidden">
+        <div class="pointer-events-none absolute inset-0">
+          <div
+            class="absolute -left-40 -top-40 h-80 w-80 rounded-full bg-slate-200/50 blur-3xl"
+            aria-hidden="true"></div>
+          <div
+            class="absolute -right-40 -top-32 h-80 w-80 rounded-full bg-slate-300/40 blur-3xl"
+            aria-hidden="true"></div>
+        </div>
+
+        <div class="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-7">
+            <p class="text-sm font-semibold text-slate-600">Software developer</p>
+            <h1 class="mt-3 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+              Moderný, spoľahlivý vývoj webových riešení
+            </h1>
+            <p class="mt-5 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
+              Ahoj, som <span class="font-semibold text-slate-800">Ing. Peter Paška</span>.
+                Tvorím webové aplikácie, ktoré fungujú a ľuďom robia radosť.  
+                Zameriavam sa na praktické produkty s dôrazom na výkon, UX a udržateľný kód.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800">
+                Kontakt
+              </a>
+              <a
+                href="#work"
+                class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50">
+                Čo robím
+              </a>
+            </div>
+
+            <dl class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <div class="rounded-2xl border border-slate-200 bg-white/70 p-4">
+                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Spokojnosť</dt>
+                <dd class="mt-2 text-sm font-semibold text-slate-900">Sústredím sa na to, aby každý projekt dával zmysel a fungoval.</dd>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white/70 p-4">
+                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Prístup</dt>
+                <dd class="mt-2 text-sm font-semibold text-slate-900">Jasná dohoda, otvorená komunikácia a férový prístup.</dd>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white/70 p-4">
+                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Výstup</dt>
+                <dd class="mt-2 text-sm font-semibold text-slate-900">Praktický, spoľahlivý produkt, ktorý robí radosť.</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div class="flex items-center gap-4">
+                <span class="h-12 w-12 rounded-2xl inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-white">
+                    PP
+                </span>
+                <div>
+                  <p class="text-sm font-semibold text-slate-900">Ing. Peter Paška</p>
+                  <p class="text-sm text-slate-600">peterpaska.sk</p>
+                </div>
+              </div>
+
+              <div class="mt-6 space-y-3">
+                <div class="rounded-2xl bg-slate-50 p-4">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Kontakt</p>
+                  <div class="mt-2 flex flex-col gap-2">
+                    <button
+                      type="button"
+                      class="hidden group inline-flex items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-3 text-left text-sm font-semibold text-slate-900 hover:bg-slate-50"
+                      data-copy="0944"
+                      aria-label="Skopírovať telefónne číslo">
+                      <span>0944</span>
+                      <span class="text-xs font-semibold text-slate-500 group-hover:text-slate-700">Kopírovať</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="group inline-flex items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-3 text-left text-sm font-semibold text-slate-900 hover:bg-slate-50"
+                      data-copy="dev@peterpaska.sk"
+                      aria-label="Skopírovať emailovú adresu">
+                      <span>dev@peterpaska.sk</span>
+                      <span class="text-xs font-semibold text-slate-500 group-hover:text-slate-700">Kopírovať</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="rounded-2xl bg-slate-50 p-4">
+                  <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Spolupráca a zodpovedný prístup</p>
+                  <p class="mt-2 text-sm text-slate-600">
+                    Jasné zadania a merateľné ciele pomáhajú vytvoriť riešenia, ktoré fungujú a majú hodnotu.
+                  </p>
+                </div>
+              </div>
+
+              <p id="toast" class="mt-4 hidden text-sm font-medium text-slate-700" role="status" aria-live="polite"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="border-t border-slate-200/70">
+        <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
+          <div class="grid gap-8 lg:grid-cols-12">
+            <div class="lg:col-span-4">
+              <h2 class="text-2xl font-bold tracking-tight text-slate-900">O mne</h2>
+              <p class="mt-2 text-sm text-slate-600">Krátky profil, jasne a stručne.</p>
+            </div>
+            <div class="lg:col-span-8">
+              <div class="rounded-3xl border border-slate-200 bg-white p-6">
+                <p class="text-base leading-relaxed text-slate-700">
+                  Som software developer so zameraním na backend aj frontend. Rád robím veci jednoduché: dobrá architektúra, zrozumiteľný kód a stabilný systém, ktorý poteší používateľov.
+                </p>
+                <p class="mt-4 text-base leading-relaxed text-slate-700">
+                    Ak hľadáte web alebo interný nástroj, ktorý funguje a prináša hodnotu, rád pomôžem.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="border-t border-slate-200/70 bg-slate-50/60">
+        <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
+          <div class="flex items-end justify-between gap-6">
+            <div>
+              <h2 class="text-2xl font-bold tracking-tight text-slate-900">Zručnosti</h2>
+              <p class="mt-2 text-sm text-slate-600">Prehľad toho, na čom najčastejšie pracujem</p>
+            </div>
+          </div>
+
+          <div class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div class="rounded-3xl border border-slate-200 bg-white p-6">
+              <p class="text-sm font-semibold text-slate-900">Backend</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">API návrh a implementácia  </span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Databázový návrh</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Práca s dátami</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Integrácie služieb</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Architektúra aplikácií</span>
+              </div>
+            </div>
+
+            <div class="rounded-3xl border border-slate-200 bg-white p-6">
+              <p class="text-sm font-semibold text-slate-900">Frontend</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Používateľské rozhranie (UI)</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Používateľský zážitok (UX)</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Logické ovládanie</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Komponentový prístup</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Responzívny dizajn</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Prepojenie s API</span>
+              </div>
+            </div>
+
+            <div class="rounded-3xl border border-slate-200 bg-white p-6">
+              <p class="text-sm font-semibold text-slate-900">Spolupráca & kvalita</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Dohoda na riešení</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Technické rozhodnutia s rozumom</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Férový prístup</span>
+                <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Zodpovednosť za výsledok</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="border-t border-slate-200/70">
+        <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
+          <div class="grid gap-8 lg:grid-cols-12">
+            <div class="lg:col-span-4">
+              <h2 class="text-2xl font-bold tracking-tight text-slate-900">Čo robím</h2>
+              <p class="mt-2 text-sm text-slate-600">Typické veci, s ktorými viem pomôcť a ktoré dávajú dlhodobo zmysel.</p>
+            </div>
+            <div class="lg:col-span-8">
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div class="rounded-3xl border border-slate-200 bg-white p-6">
+                  <p class="text-sm font-semibold text-slate-900">Weby & landing pages</p>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-600">Jednoduché, rýchle a prehľadné weby, ktoré dávajú zmysel ľuďom aj vyhľadávačom.</p>
+                </div>
+                <div class="rounded-3xl border border-slate-200 bg-white p-6">
+                  <p class="text-sm font-semibold text-slate-900">Aplikácie & interné nástroje</p>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-600">Praktické aplikácie so stabilným backendom, navrhnuté tak, aby fungovali dlhodobo a dali sa ďalej rozvíjať.</p>
+                </div>
+                <div class="rounded-3xl border border-slate-200 bg-white p-6">
+                  <p class="text-sm font-semibold text-slate-900">Integrácie</p>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-600">Prepájanie systémov, automatizácie a práca s dátami — spoľahlivo a bez zbytočnej zložitosti.</p>
+                </div>
+                <div class="rounded-3xl border border-slate-200 bg-white p-6">
+                  <p class="text-sm font-semibold text-slate-900">Riešenia na mieru</p>
+                  <p class="mt-2 text-sm leading-relaxed text-slate-600">Každý projekt je iný. Hľadám jednoduché riešenia, ktoré zapadnú do Vášho fungovania.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="border-t border-slate-200/70 bg-slate-50/60">
+        <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
+          <div class="rounded-3xl border border-slate-200 bg-white p-8">
+            <div class="flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
+              <div>
+                <h2 class="text-2xl font-bold tracking-tight text-slate-900">Kontakt</h2>
+                <p class="mt-2 text-sm text-slate-600">
+                  Najrýchlejšie cez telefón alebo mail.
+                </p>
+              </div>
+              <div class="flex flex-col gap-3 sm:flex-row">
+                <a
+                  class="hidden inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800"
+                  href="tel:0944">
+                  0944
+                </a>
+                <a
+                  class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800"
+                  href="mailto:dev@peterpaska.sk">
+                  dev@peterpaska.sk
+                </a>
+                <a
+                  class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+                  href="https://peterpaska.sk"
+                  target="_blank"
+                  rel="noreferrer">
+                  peterpaska.sk
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <footer class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-slate-200/70 pt-8 text-sm text-slate-500 sm:flex-row">
+            <p>© <span id="year"></span> Ing. Peter Paška</p>
+            <p>Single-page • HTML + Tailwind • bez buildu</p>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const menuButton = document.getElementById("menuButton");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const toast = document.getElementById("toast");
+
+      function setMenuOpen(isOpen) {
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        mobileMenu.classList.toggle("hidden", !isOpen);
+      }
+
+      menuButton.addEventListener("click", () => {
+        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+        setMenuOpen(!isOpen);
+      });
+
+      // Close mobile menu after navigation.
+      mobileMenu.addEventListener("click", (e) => {
+        const target = e.target;
+        if (target && target.matches("a[href^='#']")) setMenuOpen(false);
+      });
+
+      // Copy-to-clipboard helper.
+      document.addEventListener("click", async (e) => {
+        const target = e.target;
+        const button = target?.closest?.("button[data-copy]");
+        if (!button) return;
+
+        const value = button.getAttribute("data-copy") || "";
+        if (!value) return;
+
+        try {
+          await navigator.clipboard.writeText(value);
+          toast.textContent = "Skopírované: " + value;
+          toast.classList.remove("hidden");
+          window.setTimeout(() => toast.classList.add("hidden"), 1600);
+        } catch {
+          // Clipboard might be blocked; do nothing.
+        }
+      });
+
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>
